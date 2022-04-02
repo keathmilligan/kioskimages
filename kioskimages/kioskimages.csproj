@@ -130,19 +130,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="html\images\img1.jpg" />
-    <Content Include="html\images\img10.jpg" />
-    <Content Include="html\images\img11.jpg" />
-    <Content Include="html\images\img12.jpg" />
-    <Content Include="html\images\img13.jpg" />
-    <Content Include="html\images\img2.jpg" />
-    <Content Include="html\images\img3.jpg" />
-    <Content Include="html\images\img4.jpg" />
-    <Content Include="html\images\img5.jpg" />
-    <Content Include="html\images\img6.jpg" />
-    <Content Include="html\images\img7.jpg" />
-    <Content Include="html\images\img8.jpg" />
-    <Content Include="html\images\img9.jpg" />
     <Content Include="html\index.html" />
     <Content Include="html\scripts\index.js" />
     <Content Include="html\style\index.css" />
@@ -169,6 +156,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.13</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="html\images\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
