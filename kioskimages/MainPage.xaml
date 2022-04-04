@@ -6,9 +6,53 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Black" Tapped="Page_Tapped">
+    <Page.TopAppBar>
+        <CommandBar x:Name="CommandBar" DefaultLabelPosition="Right" ClosedDisplayMode="Hidden" IsOpen="True" IsSticky="true" OverflowButtonVisibility="Collapsed" Closed="CommandBar_Closed" Opened="CommandBar_Opened" PointerMoved="CommandBar_PointerMoved" KeyDown="CommandBar_KeyDown" Closing="CommandBar_Closing">
+            <CommandBar.Content>
+                <TextBlock Text="Kiosk Image Viewer" Margin="12,8"></TextBlock>
+            </CommandBar.Content>
+            <AppBarButton x:Name="openImageBtn" Icon="BrowsePhotos" Label="Open Image" Click="openImageBtn_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="O"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Name="openFolderBtn" Icon="Folder" Label="Open Folder" Click="openFolderBtn_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="F"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Name="prevBtn" Icon="Back" Label="Previous" Click="prevBtn_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="J"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Name="nextBtn" Icon="Forward" Label="Next" Click="nextBtn_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="K"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Name="playBtn" Icon="SlideShow" Label="Play" Click="playBtn_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="P"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Name="stopBtn" Icon="StopSlideShow" Label="Stop" Click="stopBtn_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="S"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Name="fullScreenBtn" Icon="FullScreen" Label="Full Screen" Click="fullScreenBtn_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="L"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Name="closeBtn" Icon="Cancel" Label="Close" Click="closeBtn_Click" Visibility="Collapsed"></AppBarButton>
+        </CommandBar>
+    </Page.TopAppBar>
 
-    <Grid>
+    <Grid IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False">
         <WebView x:Name="WebViewControl" Loaded="WebViewControl_Loaded"/>
+        <Rectangle Fill="Transparent"/>
     </Grid>
 </Page>
